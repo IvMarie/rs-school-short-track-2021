@@ -9,8 +9,12 @@
  * For n = 152, the output should be 52
  *
  */
-function deleteDigit(/* n */) {
-  throw new Error('Not implemented');
+function deleteDigit(n) {
+  const arrN = `${n}`.split('');
+  const result = [];
+  arrN.forEach((y, i) => result.push(+arrN
+    .filter((x, index) => (index !== i)).join('')));
+  return Math.max(...result);
 }
 
 module.exports = deleteDigit;
